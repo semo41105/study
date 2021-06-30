@@ -27,15 +27,20 @@ public class Main {
 			//등록
 			Member member = new Member();
 			member.setName("hello");
-			member.setTeamId(team.getId());
+			member.setTeam(team);
 			em.persist(member);
+			
+			//
+			em.flush();
+			em.clear();
 			
 			//조회
 			Member findMember = em.find(Member.class, member.getId());
-			Long teamId = findMember.getTeamId();
 			
-			//연관관계가 없음
-			Team findTeam = em.find(Team.class, teamId);
+			//참조를 사용해서 연관관계 조회
+			Team findTeam = findMember.getTeam();
+			
+			findTeam.getName();
 			
 			//저장
 			em.persist(member);
