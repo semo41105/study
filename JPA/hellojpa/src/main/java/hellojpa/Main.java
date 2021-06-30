@@ -24,13 +24,20 @@ public class Main {
 			team.setName("teamA");
 			em.persist(team);
 			
-			//µî·Ï
+			//ë“±ë¡
 			Member member = new Member();
 			member.setName("hello");
 			member.setTeamId(team.getId());
 			em.persist(member);
 			
-			//¿µ±¸ ÀúÀå
+			//ì¡°íšŒ
+			Member findMember = em.find(Member.class, member.getId());
+			Long teamId = findMember.getTeamId();
+			
+			//ì—°ê´€ê´€ê³„ê°€ ì—†ìŒ
+			Team findTeam = em.find(Team.class, teamId);
+			
+			//ì €ì¥
 			em.persist(member);
 			tx.commit();
 		} catch (Exception e) {
