@@ -1,5 +1,7 @@
 package hellojpa;
 
+import java.util.List;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
@@ -38,10 +40,20 @@ public class Main {
 			Member findMember = em.find(Member.class, member.getId());
 			
 			//참조를 사용해서 연관관계 조회
-			Team findTeam = findMember.getTeam();
+			//Team findTeam = findMember.getTeam();
 			
-			findTeam.getName();
+			//findTeam.getName();
 			
+			//List<Member> members = findTeam.getMembers();
+			//for (Member member1 : members) {
+			//	System.out.println("member1= "+ member1);
+			//}
+			//조회
+			Team findTeam = em.find(Team.class, team.getId());
+			
+			//역방향 조회
+			int memberSize = findTeam.getMembers().size();
+			System.out.println(memberSize);
 			//저장
 			em.persist(member);
 			tx.commit();
