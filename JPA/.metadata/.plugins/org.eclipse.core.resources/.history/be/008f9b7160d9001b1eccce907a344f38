@@ -1,0 +1,11 @@
+package hellojpa;
+
+import javax.persistence.EntityManagerFactory;
+
+public class Main {
+	public static void main(String[] args) {
+		EntityManagerFactory emf =
+				Persistence.createEntityManagerFactory("hello");
+		System.out.println("hello");
+	}
+}

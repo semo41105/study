@@ -1,0 +1,5 @@
+package hellojpa.entiity;
+
+public class Team {
+
+}
