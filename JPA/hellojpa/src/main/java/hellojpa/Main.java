@@ -6,6 +6,7 @@ import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
 import hellojpa.entiity.Member;
+import hellojpa.entiity.Team;
 
 public class Main {
 	
@@ -18,9 +19,16 @@ public class Main {
 		tx.begin();
 		
 		try {
+			
+			Team team = new Team();
+			team.setName("teamA");
+			em.persist(team);
+			
+			//등록
 			Member member = new Member();
-			member.setId(100L);
-			member.setName("안녕하세요");
+			member.setName("hello");
+			member.setTeamId(team.getId());
+			em.persist(member);
 			
 			//영구 저장
 			em.persist(member);
