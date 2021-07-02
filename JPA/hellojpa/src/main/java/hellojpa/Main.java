@@ -29,15 +29,16 @@ public class Main {
 			//등록
 			Member member = new Member();
 			member.setName("hello");
-			member.setTeam(team);
+//			member.setTeam(team);
 			em.persist(member);
+			team.getMembers().add(member);
 			
 			//
 			em.flush();
 			em.clear();
 			
 			//조회
-			Member findMember = em.find(Member.class, member.getId());
+//			Member findMember = em.find(Member.class, member.getId());
 			
 			//참조를 사용해서 연관관계 조회
 			//Team findTeam = findMember.getTeam();
@@ -49,13 +50,13 @@ public class Main {
 			//	System.out.println("member1= "+ member1);
 			//}
 			//조회
-			Team findTeam = em.find(Team.class, team.getId());
+//			Team findTeam = em.find(Team.class, team.getId());
 			
 			//역방향 조회
-			int memberSize = findTeam.getMembers().size();
-			System.out.println(memberSize);
+//			int memberSize = findTeam.getMembers().size();
+//			System.out.println(memberSize );
 			//저장
-			em.persist(member);
+//			em.persist(member);
 			tx.commit();
 		} catch (Exception e) {
 			tx.rollback();
