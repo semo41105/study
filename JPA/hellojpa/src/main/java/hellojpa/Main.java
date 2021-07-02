@@ -31,7 +31,11 @@ public class Main {
 			member.setName("hello");
 //			member.setTeam(team);
 			em.persist(member);
-			team.getMembers().add(member);
+			//역방향(주인이 아닌 방향)만 연관관계 설정
+//			team.getMembers().add(member);
+			
+			//연관관계의 주인에 값 설정
+			member.setTeam(team); //**
 			
 			//
 			em.flush();
