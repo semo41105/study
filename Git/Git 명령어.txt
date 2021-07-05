@@ -1,0 +1,11 @@
+git init
+기존 프로젝트를 Git으로 관리하고 싶을 때, 프로젝트의 디렉토리로 이동해서 실행
+
+git --version
+깃 버전 확인
+
+git status
+현재 파일들의 상태
+
+git add 파일명
+깃 파일 추가
