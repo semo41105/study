@@ -31,6 +31,7 @@ public class Main {
 			member.setName("hello");
 //			member.setTeam(team);
 			em.persist(member);
+
 			//역방향(주인이 아닌 방향)만 연관관계 설정
 //			team.getMembers().add(member);
 			
@@ -62,11 +63,14 @@ public class Main {
 			//저장
 //			em.persist(member);
 			tx.commit();
+
 		} catch (Exception e) {
 			tx.rollback();
+
 		}finally {
 			em.close();
 		}
+
 		System.out.println("hello");
 		emf.close();
 	}
