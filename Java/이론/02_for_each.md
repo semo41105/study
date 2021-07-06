@@ -9,16 +9,14 @@ String[] numbers = {"one", "two", "three"};
 for(int i=0; i<numbers.length; i++) {  
     System.out.println(numbers[i]);  
 }  
-- for each 구조로 변경하면 다음과 같다.  
-
+- for each 구조로 변경하면 다음과 같다.
 String[] numbers = {"one", "two", "three"};  
 for(String number: numbers) {  
     System.out.println(number);  
 }  
 
 
-* for each 문의 구조는 다음과 같다.  
-
+* for each 문의 구조는 다음과 같다.
 for (type var: iterate) {  
     body-of-loop  
 }  
