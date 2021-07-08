@@ -9,3 +9,6 @@ git status
 
 git add 파일명
 깃 파일 추가
+
+git checkout 브랜치이름
+브랜치 전환
