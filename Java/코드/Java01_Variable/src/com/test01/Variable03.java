@@ -68,3 +68,4 @@ public class Variable03 {
 		//상수값은 재할당 불가능	
 	}
 }
+

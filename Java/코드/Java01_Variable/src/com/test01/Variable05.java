@@ -82,3 +82,4 @@ public class Variable05 {
 		System.out.println("double: " + (double)inum);	
 	}
 }
+

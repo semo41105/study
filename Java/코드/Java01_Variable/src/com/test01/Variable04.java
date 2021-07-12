@@ -37,3 +37,4 @@ public class Variable04 {
 		System.out.println("bnum: " + bnum);	
 	}	
 }
+

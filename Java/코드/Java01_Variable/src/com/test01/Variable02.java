@@ -58,3 +58,4 @@ public class Variable02 {
 		System.out.println(name + "님은 " + age + "세 이며, 키는 " + height + "cm 입니다.");		
 	}	
 }
+
