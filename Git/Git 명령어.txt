@@ -12,3 +12,9 @@ git add 파일명
 
 git checkout 브랜치이름
 브랜치 전환
+
+git branch --delete 브랜치이름
+브랜치 삭제
+
+git fetch
+원격 저장소의 데이터를 로컬에 가져오기만 하기
