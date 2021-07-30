@@ -1,0 +1,2 @@
+ы sr java.util.ArrayListx곏쇙a? I sizexp   w   sr &com.collection.silsub1.model.dto.Board퓎싦?햓 I boardNoI 	readCountL boardContentt Ljava/lang/String;L 	boardDatet Ljava/util/Date;L 
+boardTitleq ~ L boardWriterq ~ xp       t 333sr java.util.Datehj?KYt  xpw  v?Axt 111t 222sq ~        t ssssq ~ w  v?Yxt 222t 333x
