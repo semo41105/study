@@ -5,17 +5,16 @@ import java.io.IOException;
 
 public class TestFile {
 	public static void main(String[] args) {
-		//File Å¬·¡½º
+		//File Å¬ï¿½ï¿½ï¿½ï¿½
 		File file = new File("p.txt");
-		System.out.println("ÆÄÀÏ °´Ã¼ »ý¼º ¿Ï·á!");
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼ ï¿½ï¿½ï¿½ï¿½ ï¿½Ï·ï¿½!");
 		
-		System.out.println("ÆÄÀÏ¸í: "+ file.getName());
-		System.out.println("ÀúÀå°æ·Î: "+ file.getPath());
-		System.out.println("ÀúÀå°æ·Î: "+ file.getAbsolutePath());
-		System.out.println("ÆÄÀÏ¿ë·®: "+ file.length());
-		
+		System.out.println("ï¿½ï¿½ï¿½Ï¸ï¿½: "+ file.getName());
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: "+ file.getPath());
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: "+ file.getAbsolutePath());
+		System.out.println("ï¿½ï¿½ï¿½Ï¿ë·®: "+ file.length());
 		try {
-			//false: ±âÁ¸¿¡ ÆÄÀÏÀÌ ÀÖ´Â °æ¿ì, true: »õ·Ó°Ô »ý¼ºÇÑ °æ¿ì
+			//false: ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½, true: ï¿½ï¿½ï¿½Ó°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
 		boolean b = file.createNewFile();
 		System.out.println(b);
 		

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<!-- 주석 -->
+	<div style="color:blue;">
+		<form action = "res.jsp" method = "post">
+			이름: <input type = "text" name = "tname" maxlength = "30 "/>	
+			주소: <input type = "text" name = "taddr" maxlength = "30" />
+			<br>
+			<input type = "button" value = "버튼">
+			<input type = "submit" value = "전송">
+			<input type = "reset" value = "취소">
+		</form>
+		
+	</div>
+	<pre>
+	웹은 서버에 페이지를 요청(HTTP Request)할 때 두 가지 방식을 취한다.
+	주소줄에 요청 페이지와queryString을 포함한 GET 방식 - 방금 한 방식
+	주소줄에 요청 페이지만 있고 queryString이 없는 POST 방식(데이터를 히든으로 처리)
+	
+	*QueryString: ?를 포함한 변수=값&변수=값&...을 말한다.
+	</pre>
+</body>
+</html>
