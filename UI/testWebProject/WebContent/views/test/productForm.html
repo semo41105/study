@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>productForm</title>
+</head>
+<body>
+    <form action="testw/product.html" method="post" autocomplete="on">
+        <fieldset>
+        <legend>납품자정보</legend>
+        <br>
+        <ol>
+            <li><label id="name">납품자명:</label> <input id="name" required="text" placeholder="name"></li><br>
+            <li><label id="email">email:</label> <input id="email" required="email" placeholder="answs@naver.com"></li><br>
+            <li><label id="homepage">홈페이지:</label> <input id="homepage" required="homepage" placeholder="http://"></li><br>
+        </ol>
+        </fieldset>
+    </form>
+    <br>
+    <form action="testw/product.html" method="post" autocomplete="on">
+        <fieldset>
+        <legend>납품정보</legend>
+        <ul>
+            <li><label id="pname">상품명: </label> <input type="text" id="pname"></li> 
+            <br>
+            <li><label id="pnum">납품수량: </label><input type="text" placeholder="최소100" size="10" id="pnum"> </li> 
+            <br>
+            <li><label id="pgrade">납품등급: </label><input type="range" min="100" max="200" value="150" id="pgrade"></li>
+            <br> 
+            <li><label id="pex">기타사항: </label><textarea cols="20" rows="2" id="pex"></textarea></li> 
+        </ul>
+        </fieldset>
+    </form>
+    <br>
+    <button type="submit" >send message</button>
+
+    
+</body>
+</html>
