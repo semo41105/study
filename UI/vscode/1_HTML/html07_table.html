@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블</title>
+</head>
+<body>
+    <!--
+        표를 만드는 태그에는<table><tr><th><td>
+        <table>: 기본적인 표를 생성해주는 태그
+        <tr>: 표의 행을 나타내는 태그
+        <th>: 표의 제목셀을 나타내는 태그
+        <td>: 표의 일반셀을 나타내는 태그        
+    -->
+    <h2>기본 테이블 만들기</h2>
+    <table border="1" style="width: 300px;" >
+        <tr>
+            <th>컬럼01</th>
+            <th>컬럼02</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>5</td>
+        </tr>
+    </table>
+
+
+    <h2>주요 태그 사용해서 만들기</h2>
+    <table border="1">
+        <caption>테이블 제목</caption>
+        <colgroup>
+            <col width="100px" >
+            <col width="200px" >
+            <col width="300px" >
+        </colgroup>
+        <tfoot>
+            <td>f1</td>
+            <td>f2</td>
+            <td>f3</td>
+        </tfoot>
+        <thead>
+        <tr>
+            <th>COL1</th>
+            <th>COL2</th>
+            <th>COL3</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+        </tr>
+    </tbody>
+
+    </table>
+
+
+    <h2>테이블 셀 병합하기</h2>
+    <!--<td> 태그의 속성을 이용하여 행, 열 합치기 가능
+        colspan: 열을 합친다.
+        rowspan: 행을 합친다.
+    -->
+    <table border="1">
+        <caption>병합 테이블</caption>
+        <thead style="background-color: pink;">
+            <tr>
+                <th>COL1</th>
+                <th>COL2</th>
+                <th>COL3</th>
+                <th>COL4</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">1(세로 합치기)</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+            <td>5</td>
+            <td colspan="2">6</td>
+            <td>7</td>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="4">가로 합치기</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <hr>
+
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <td><input type="text"></td>
+            
+        </tr>
+        <tr>
+            <th>PW</th>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+        <td colspan="2">
+            <input type="button" value="로그인">
+            <input type="button" value="취소">
+        </td>
+        </tr>
+
+    </table>
+
+
+</body>
+</html>
