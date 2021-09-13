@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form01</title>
+</head>
+<body>
+    <!--    action: 수신대상, method: 전송방식(get,post)
+
+
+    -->
+    <form action="html10_form01.res.html" method="post">
+        <fieldset>
+            <legend>회원가입</legend>
+            <p>아이디: <input type="text" name="id" > </p>
+            <p>비밀번호: <input type="password" name="pw"></p>
+            <p>이메일 수신여부
+                <input type="radio" name="radio" value="y">y&nbsp;
+                <input type="radio" name="radio" value="n">n
+            </p>
+            <p>관심분야
+                <input type="checkbox" name="cb1" value="html">HTML
+                <input type="checkbox" name="cb2" value="css">CSS
+                <input type="checkbox" name="cb3" value="javascript">JS
+            </p>
+            <input type="hidden" name="hidden1" value="hidden_value">
+
+            <p>지역
+                <select name="selected">
+                    <optgroup label="서울">
+                        <option value="kang-nam">강남</option>
+                        <option value="sa-dang">사당</option>
+                        <option value="yeok-sam">역삼</option>
+                    </optgroup>
+                    <optgroup label="경기">
+                        <option value="suwon">수원</option>
+                        <option value="anyang">안양</option>
+                    </optgroup>    
+                </select>
+
+
+
+
+            </p>
+
+
+
+            <p>
+                <input type="submit" value="전송"><input type="reset" value="취소">
+                <input type="button" value="그냥 버튼">
+            </p>
+
+        </fieldset>
+
+    </form>
+    
+</body>
+</html>
