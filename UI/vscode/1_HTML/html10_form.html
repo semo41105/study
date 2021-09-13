@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼 관련 태그</title>
+</head>
+<body>
+    <h1>폼 관련 태그</h1>
+    <p>form태그는 html에서 사용자가 입력할 수 있는 양식을 제공하는 태그다.<br>
+    form태그 내의 input태그들을 통해 사용자가 입력한 정보를 서버로 넘기는 역할을 한다.    
+    </p>
+    <form>
+        <label>검색할 내용 </label><input type="text" size="20" >&nbsp;<input type="submit" value="검색">
+    </form>    
+
+    <hr>
+    <form>
+        <fieldset>
+            <legend>필드셋의 제목을 작성하는 부분</legend>
+            <label>입력 1: </label><input type="text"><br>
+            <label>입력 2: </label><input type="text"><br>
+            <label>입력 3: </label><input type="text"><br>
+        </fieldset>
+        <fieldset>
+            <legend>필드셋으로 묶은 영역별로 구분</legend>
+            <label>입력 1: </label><input type="text"><br>
+            <label>입력 2: </label><input type="text"><br>
+            <label>입력 3: </label><input type="text"><br>
+        </fieldset>
+    </form>
+
+    <hr>
+    <form>
+        <h2>text와 관련된 input태그</h2>
+        <p>-한 줄 짜리 텍스트를 입력할 수 있는 텍스트 상자</p>
+        <label>아이디: </label> <input type="text" name="userid" size="20"
+                                placeholder="아이디를 입력하세요" maxlength="15"
+                                value="khacademy">
+        <br>
+        <p>-비밀번호를 입력할 수 있는 텍스트 상자</p>                        
+        <label>비밀번호: </label> <input type="password" size="20" maxlength="15"
+                                placeholder="비밀번호를 입력하세요" >
+        <br>
+        <p>-텍스트 필드와 비슷하지만 각각의 정보에 맞게 분화된 기능을 제공하는 텍스트 상자들</p>                
+        홈페이지: <input type="url" name="homepage" value="https://"><br>
+        이메일: <input type="email" placeholder="이메일을 입력하세요"><br>
+        <input type="search">
+        <input type="tel">
+        <br><br>
+        <input type="submit" value="전송"> &nbsp; <input type="reset" value="취소">
+    </form>
+
+    <hr>
+
+    <form>
+        <h2>숫자와 관련된 input 태그</h2>
+        수량: <input type="number" name="amount" min="0" max="100" value="50" step="5">
+        <br>
+        점수: <input type="range" min="0" max="100" value="40" step="10">
+    </form>
+
+    <form>
+        <h2>날짜/시간 관련된 input 태그</h2>
+        date: <input type="date"><br>
+        month: <input type="month"><br>
+        week: <input type="week"><br>
+        time: <input type="time">
+    </form>
+
+    <form>
+        <h2>라디오버튼과 체크박스</h2>
+        성별: <input type="radio" id="male" name="gender" value="M"><label for="male">남자</label>
+              <input type="radio" id="female" name="gender" value="F"><label for="female">여자</label>
+        <br>
+        취미: <input type="checkbox" id="baseball" name="hobby" value="baseball"> 야구
+        &nbsp;<input type="checkbox" id="basketball" name="hobby" value="basketball"> 농구
+        &nbsp;<input type="checkbox" id="football" name="hobby" value="football"> 축구
+
+
+
+        <br><br>
+        <input type="submit" value="전송">      
+    </form>
+
+    <form>
+        <h2>그 밖의 input 태그</h2>
+        색상선택: <input type="color" name="color"><br>
+        파일선택: <input type="file" name="upload"><br>
+        히든: <input type="hidden" name="hidden" value="1"><br>
+        <button>button</button><button type="submit" >submit</button>
+    </form>
+
+    <form>
+        <h2>select 태그와 option 태그</h2>
+        국적:
+        <select>
+            <option value="ko">한국</option>
+            <option value="us">미국</option>
+            <option value="fr">프랑스</option>
+        </select>
+        <br>
+        <select size="2" multiple>
+            <option value="ko">한국</option>
+            <option value="us">미국</option>
+            <option value="fr">프랑스</option>
+        </select>
+
+        <br><br>
+        <h2>textarea</h2>
+        <textarea cols="30" rows="10" style="resize: none;"></textarea>
+    </form>
+
+</body>
+</html>
