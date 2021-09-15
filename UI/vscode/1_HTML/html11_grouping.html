@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style type="text/css">
+    div{
+        border: 1px dashed red;
+        margin: 10px;
+    }
+
+    #body{
+        height: 400px;
+    }
+    #left{
+        width: 45%;
+        height: 85%;
+        float: left;
+    }
+    #right{
+        width: 45%;
+        height: 85%;
+        float: right;
+    }
+</style>
+</head>
+<body>
+    <!--
+        시맨틱 구조, 시맨틱 태그
+
+        header: 제목, 로고, 아이콘...
+        nav: 메뉴
+        section: 컨텐츠를 주제별로 묶고 싶을 경우
+        article: 독립적으로 사용할 수 있는 내용을 정의
+        aside: 광고나 메인내용과 상관없는 내용을 정의
+        footer: 저자, 저작권, 연락처...
+    -->
+    <div id="header" >
+        <h1>제목</h1>
+        <div>
+            <span><a href="html01_block_inline.html">메뉴1</a></span>
+            <span><a href="html02_title.html">메뉴2</a></span>
+            <span><a href="html03_hr_quotation.html">메뉴3</a></span>
+            <span><a href="html04_text.html">메뉴4</a></span>
+        </div>
+    </div>
+    <hr>
+    <div id="body">
+        <div id="left">
+            <p>왼쪽 본문 내용</p>
+        </div>
+        <div id="right">
+            <p>오른쪽 본문 내용</p>
+            <div id="login">
+                <table>
+                    <tr>
+                        <th>ID</th>
+                        <td><input type="text"> </td>
+                    </tr>
+                    <tr>
+                        <th>PW</th>
+                        <td><input type="text"> </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input type="text"></td>
+                        
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div>
+    <hr>
+    <div id="footer">
+        <address>copyright &copy; all rights reserved...</address>
+
+    </div>
+
+
+
+
+    
+</body>
+</html>
