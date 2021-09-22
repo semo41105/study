@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style type="text/css">
+/*태그 선택자*/
+div{
+    width: 300px;
+    height: 300px;
+    background-color: orange;
+
+}  
+/*클래스*/
+.test1{
+    background-color: yellowgreen;
+    color: white;
+}  
+/*아이디*/
+#test1{
+    background-color: pink;
+}
+
+/*----------------*/
+#test2{
+    width: 300px;
+    height: 300px;
+    background-color: yellow;
+    color: black;
+}
+<!--아이디 선택자가 우선이기 때문에 노랑색-->
+.test3{
+    background-color: black;
+}
+
+p{
+    background-color: red;
+    color: white;
+}
+
+p{
+    background-color: violet !important;
+    color: white;
+
+}
+</style>
+</head>
+<body>
+    <h1>선택자 우선순위</h1>
+    <p>기본적으로 css속성은 위에서부터 아래로 적용, 같은 태그에 여러 개의 css속성이 설정된 경우에는 
+    우선순위에 따라 스타일이 적용된다.    
+    </p>
+    <pre> 태그선택자 < 클래스선택자 < 아이디선택자 < 인라인스타일 < !important</pre>
+    <hr>
+    <div id="test1" class="test1" style="background-color: purple;">우선순위테스트</div>
+
+    <p id="test2" class="test3" style="background-color: yellowgreen;">우선순위 테스트</p>
+</body>
+</html>
