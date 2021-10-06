@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style type="text/css">
+    .polaroid{
+        border: 1px solid #808080;
+        width: 300px;
+        position: relative;
+        left: 100px;
+        top: 50px;
+        padding: 10px 10px 20px 10px;
+        box-shadow: 2px 2px 3px gray;
+    }
+
+    .caption{
+        text-align: center;
+        font-weight: bold;
+        font-size: 20pt;
+        color: blue;
+    }
+
+    .rotate{
+        transform: rotate(10deg);
+    }
+</style>    
+</head>
+<body>
+    <h2>폴라로이드 느낌의 사진 만들기</h2>
+    <hr>
+    <div class="polaroid rotate">
+    <!--폴라로이드 로테이트 각각 클래스명으로 볼 수 있다.-->
+        <img src="image/img01.png" width="300" height="180">
+        <p class="caption">고양이가 야옹야옹</p>
+    </div>
+    
+</body>
+</html>
