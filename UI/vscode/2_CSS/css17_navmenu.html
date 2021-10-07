@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메뉴 구성</title>
+<style type="text/css">
+    
+    .navi{
+        list-style-type: none;
+        height: 40px;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .navi li{
+        float: left;
+        position: relative;
+        padding: 0;
+        line-height: 40px;
+        background-color: khaki;
+    }
+    
+    .navi li a{
+        display: block;
+        font-weight: 600;
+        font-size: 15pt;
+        padding: 5px 25px;
+        color: darkgreen;
+        text-decoration: none;
+    }
+    
+    .navi li a:hover{
+        color:firebrick;
+        
+    }
+    
+    .navi li ul{
+        position: absolute;
+        left: 0;
+        width: 200px;
+        background: yellow;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        opacity: 0;
+        
+    }
+ 
+    .navi li:hover ul{
+        opacity: 1;
+    }
+        
+    .navi li ul li{
+        float: none;
+        position: static;
+        height: 0;
+        line-height: 0;
+        background-color: none;
+    }
+    
+    .navi li:hover ul li{
+        height: 50px;
+        line-height: 50px;
+        padding: 5px 0;
+    }
+
+    .navi li ul li a:hover{
+        background-color:orange;
+    }
+/*
+   
+    .navi li{
+        transition: all 0.2s;
+    }
+    .navi li a{
+        transition: all 0.5s;
+    }
+    .navi li ul{
+        transition: all 1s;
+    }
+    .navi li ul li{
+        transition: height 0.5s;
+    }
+*/
+</style>
+
+</head>
+<body>
+    <h2>서브 메뉴가 펼쳐지는 네비게이션 만들기</h2>
+    <hr>
+    <ul class="navi">
+        <li><a href="">Home</a></li>
+        <li><a href="">웹개발</a>
+            <ul>
+                <li><a href=""> 웹 디자인</a></li>
+                <li><a href=""> HTML5 + CSS3</a></li>
+                <li><a href=""> JQuery</a></li>
+                <li><a href=""> 웹 애플리케이션</a></li>
+            </ul>
+        
+        </li>
+        <li><li><a href=""> 게시판</a>
+            <ul>
+                <li><a href=""> QnA</a></li>
+                <li><a href=""> 방명록</a></li>
+            </ul>
+
+        </li>
+
+    </ul>
+    
+</body>
+</html>
