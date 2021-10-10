@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style type="text/css">
+#logo{
+    float: left;
+}
+#login{
+    float: right;
+
+}
+#navi{
+    clear: both;
+}
+#navi span{
+    padding: 40px;
+}
+
+#content{
+    width: 100%;
+    height: 400px;
+    background-color: gray;
+}
+
+
+#footer{
+    height: 80px;
+    width: 100%;
+}
+
+
+</style>
+
+
+
+</head>
+<body>
+    <header>
+    <img src="resources/images/logo.gif" width="100px" height="100px" id="logo">    
+   <form>
+       <fieldset id="login">
+           <legend>로그인 폼 영역</legend>
+           <label>ID: </label><input type="text" id="id"><br>
+           <label>PW: </label><input type="password" id="pw"><br>
+           <input type="submit" value="로그인">
+           <button><a>회원가입</a></button>
+       </fieldset>
+       <nav id="navi">
+        <span><a href="">메인</a></span>
+        <span><a href="">공지사항</a></span>
+        <span><a href="">자유게시판</a></span>
+        <span><a href="">갤러리</a></span>
+        <span><a href="">회원관리</a></span>
+        <span><a href="">채팅하기</a></span>
+       </nav>
+   </form> 
+</header>
+    <section id="content">
+
+    </section>
+    <footer id="footer" style="text-align: center; background-color: skyblue;" >
+        "Copyright © 1998-2019 Information Educational Institute All Right Reserved"
+    </footer>
+</body>
+</html>
