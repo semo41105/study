@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String과 Math</title>
+<style type="text/css">
+    .a{
+        border: 1px solid red;
+        height: 420px;
+        width: 500px;
+    }
+
+</style>
+<script type="text/javascript">
+    function stringMethod(){
+        var str1 = "Apple iPhone";
+
+        var doc = document.getElementById("area1");
+        doc.innerHTML += "toUpperCase() : " + str1.toUpperCase()+"<br>";
+        doc.innerHTML += "toLowerCase() : " + str1.toLowerCase()+"<br>";
+
+        doc.innerHTML += "length : " + str1.length + "<br>";
+
+        doc.innerHTML += "문자열에서 e의 위치 : " + (str1.indexOf('e')+1)+"번째에 위치<br>";
+        //indexof는 위치를 찾는 함수이며 인덱스는 0부터 시작
+        doc.innerHTML += "뒤에서부터 e의 위치 : " + (str1.lastIndexOf('e')+1)+"번째에 위치<br>";
+        
+        for(var i=0; i<str1.length; i++){
+            doc.innerHTML += i + "번째 인덱스 : " + str1.charAt(i)+"<br>";
+        }
+
+        doc.innerHTML += "문자열 일부만 리턴 : " + str1.substring(8,10) + "<br>";
+        
+        var str2 = "사과, 바나나, 복숭아, 키위, 파인애플";
+
+        var fruits = str2.split(", ");
+        doc.innerHTML += "str2.split()한 배열 : " + fruits + "<br>";
+        console.log(fruits);
+        console.log(str1);
+
+
+    }
+
+
+    function mathMethod(){
+        var doc = document.getElementById("area2");
+
+        var num = -123;
+
+        doc.innerHTML += "절대값 : " + Math.abs(num)+"<br>";
+
+        doc.innerHTML += "임의의 난수 : " + Math.random()+"<br>";
+
+        doc.innerHTML += "반올림 : " + Math.round(1234.56)+"<br>";
+        doc.innerHTML += "내림 : " + Math.floor(1234.56)+"<br>";
+        doc.innerHTML += "올림 : " + Math.ceil(123.456)+"<br>";
+        
+
+
+
+    }
+</script>
+</head>
+<body>
+    <h1>String과 Math</h1>
+    <h3>String</h3>
+    <p>
+        "",''로 묶여있는 리터럴이다. <br>자바스크립트의 내장객체로 String객체의 기본적인 메소드가 있다.
+    </p>
+    <button onclick="stringMethod();">문자열 처리 메소드</button>
+    <div id="area1" class="a"></div>
+
+    <h3>Math</h3>
+    <button onclick="mathMethod();">숫자 처리 메소드</button>
+    <div id="area2" class="a"></div>
+</body>
+</html>
