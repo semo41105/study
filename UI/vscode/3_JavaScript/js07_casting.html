@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>데이터 형변환</title>
+</head>
+<body>
+    <h1>데이터 형변환</h1>
+    <h3>문자열과 숫자의 '+' 연산</h3>
+    <button onclick="test();">형변환</button>
+    <div></div>
+    <script type="text/javascript">
+    //원래는 이런 식으로 쓰는 건 지양해야 함. 나중에 스크립트와 html코드가 헷갈릴 수 있음.
+        function test(){
+            var doc = document.getElementsByTagName("div")[0];
+            console.log(doc);
+
+            var test1 = 7+7;
+            var test2 = 7+"7";
+            var test3 = "7"+7;
+            var test4 = "7"+"7";
+            var test5 = 7+7+"7";
+            var test6 = 7+"7"+7;
+            var test7 = "7"+7+7;
+            var test8 = "7"+(7+7);
+
+            doc.innerHTML += ' 7+7= '+test1+"<br>";
+            doc.innerHTML += ' 7+"7"= '+test2+"<br>";
+            doc.innerHTML += ' "7"+7= '+test3+"<br>";
+            doc.innerHTML += ' "7"+"7"= '+test4+"<br>";
+            doc.innerHTML += ' 7+7+"7"= '+test5+"<br>";
+            doc.innerHTML += ' 7+"7"+7= '+test6+"<br>";
+            doc.innerHTML += ' "7"+7+7= '+test7+"<br>";
+            doc.innerHTML += ' "7"+(7+7)= '+test8+"<br>";
+
+            //
+            var no1 =2;
+            var no2 = "3";
+
+            console.log(no1+no2);
+            console.log(no1+Number(no2));
+            console.log(no1+parseInt(no2));
+            console.log(no1+parseFloat(no2));
+
+        }
+
+    </script>
+
+</body>
+</html>
