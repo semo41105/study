@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습</title>
+    <style type="text/css">
+
+    .box{
+        text-align: left;
+        background-color: darkorange;
+        width: 600px;
+        height: 80px;
+        padding: 10px;  
+        display: none;
+    }
+
+    /*
+    
+    fieldset{
+        width: 400px;
+        text-align: center;
+        background-color: gray;
+        
+    }
+
+    .box{
+        width: 500px;
+        height: 60px;
+        margin: 10px;
+        padding: 10px;
+        background-color: darkorange;
+        display: none;
+    }
+    
+    
+    */
+
+    </style>
+    <script type="text/javascript">
+    //제목 체크시, titleBox만 보여지게
+    //날짜 체크시, dateBox만 보여지게
+    //작성자 체크시, writerBox만 보여지게
+        function titlepop(){
+
+            document.getElementById("titleBox").style.display = "block";
+            document.getElementById("dateBox").style.display = "none";
+            document.getElementById("writerBox").style.display = "none";
+            
+            
+        }
+
+        function datepop(){
+            document.getElementById("dateBox").style.display = "block";
+            document.getElementById("titleBox").style.display = "none";
+            document.getElementById("writerBox").style.display = "none";
+
+        }
+
+        function writerpop(){
+            document.getElementById("writerBox").style.display = "block";
+            document.getElementById("titleBox").style.display = "none";
+            document.getElementById("dateBox").style.display = "none";
+        }
+
+        /*
+        function show(ele){
+            console.log(ele);
+
+            if(ele.checked == true && ele.value=="title"){
+                document.getElementById("titleBox").style.display = "block";
+                document.getElementById("dateBox").style.display = "none";
+                document.getElementById("writerBox").style.display = "none";
+            }
+            
+            if(ele.checked == true && ele.value=="date"){
+                document.getElementById("titleBox").style.display = "none";
+                document.getElementById("dateBox").style.display = "block";
+                document.getElementById("writerBox").style.display = "none";
+            }   
+            if(ele.checked == true && ele.value=="writer"){
+                document.getElementById("titleBox").style.display = "none";
+                document.getElementById("dateBox").style.display = "none";
+                document.getElementById("writerBox").style.display = "block";
+            }           
+        }
+        
+        
+        
+        
+        
+        */
+
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+    <h2>연습</h2>
+    <fieldset style="text-align: center;">
+        <legend>검색할 항목을 선택하세요.</legend>
+        <input type="radio" name="category" value="title" onclick="titlepop();" id="title">
+        <label for="title">제목</label>&nbsp;
+        <input type="radio" name="category" value="date" onclick="datepop();" id="date">
+        <label for="date">날짜</label>&nbsp;
+        <input type="radio" name="category" value="writer" onclick="writerpop();" id="writer">
+        <label for="writer">작가</label>&nbsp;
+    </fieldset>
+    <!--
+        <fieldset style="text-align: center;">
+        <legend>검색할 항목을 선택하세요.</legend>
+        <input type="radio" name="category" value="title" onclick="show(this);" id="title">
+        <label for="title">제목</label>&nbsp;
+        <input type="radio" name="category" value="date" onclick="show(this);" id="date">
+        <label for="date">날짜</label>&nbsp;
+        <input type="radio" name="category" value="writer" onclick="show(this);" id="writer">
+        <label for="writer">작가</label>&nbsp;
+    </fieldset>
+
+    -->
+
+<hr>
+<div id="titleBox" class="box">
+    <form>
+        <label>검색할 제목을 입력하세요 : </label><br>
+        <input type="text" name="title" size="50">&nbsp;
+        <input type="submit" value="검색">
+    </form>
+</div>
+
+<div id="dateBox" class="box">
+    <form>
+        <label>검색할 날짜를 선택하세요 : </label><br>
+        <input type="date" name="start"> - <input type="date" name="end">&nbsp;
+        <input type="submit" value="검색">
+
+    </form>
+</div>
+
+<div id="writerBox" class="box">
+    <form>
+        <label>검색할 작성자 아이디를 입력하세요 : </label><br>
+        <input type="text" name="writer" size="25">&nbsp;
+        <input type="submit" value="검색">
+    </form>
+    
+</div>
+    
+</body>
+</html>
