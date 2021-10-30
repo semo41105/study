@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체</title>
+<script type="text/javascript">
+    //객체 작성1
+    function myClassS(){
+        this.name = "학교"; //외부에서 접근 가능
+        var name02 = "S강의실"; //외부에서 접근 불가능
+        this.getName02 = function(){
+            return name02;
+        }
+    }
+
+    //객체 작성2
+    var myClassS_2 = {
+        name: "academy",
+        print:function(){
+            alert(myClassS_2.name+": print");
+            return myClassS_2.name;
+        }
+    }
+
+    myClassS.prototype.printName=function(){
+        var abc = "메롱";
+        alert(this.name+", "+this.getName02()+": proyotype "+abc);
+
+
+
+    }
+
+    function test(){
+        var cls = new myClassS();
+        // cls.name = "k";
+        // alert("cls: "+cls.name); //접근 가능
+        
+        // var cls2 = new myClassS();
+        // alert("cls2: "+cls2.name);
+        // alert(cls.name02); //접근 불가능
+        // alert(cls.getName02());
+        // cls.printName();
+        // cls2.printName();
+    
+        myClassS_2.print();
+    
+        //객체에 속성을 추가
+        cls.addr = "역삼역";
+        console.log(cls);
+
+        //student
+        var student = new Student('홍길동',99,82);
+        console.log(student.toString());
+
+        //student2
+        var s2 = new Student2();
+        console.log(s2);
+
+    
+    }
+
+    function Student(name, java, oracle){
+        this.name = name;
+        this.java = java;
+        this.oracle = oracle;
+
+        this.getSum = function(){
+            return this.java + this.oracle;
+        }
+
+        this.toString = function(){
+            return this.name+", 총점 : "+this.getSum();
+        }
+    }
+
+    function Student2(){
+        var name = '홍길동';
+        var age = '19';
+
+    }
+
+</script>
+</head>
+<body>
+<pre>
+객체: 관련된 데이터와 함수의 집합
+객체의 구성
+-메소드 : 기능정의
+-속성 : 객체 내의 데이터
+-this : 객체 내부의 메소드나 속성을 정의할 때 사용
+-proto타입 : 객체의 확장
+   
+</pre>
+
+<button onclick="test();">객체</button>
+
+</body>
+</html>
