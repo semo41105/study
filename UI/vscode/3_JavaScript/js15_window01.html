@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>window</title>
+<script type="text/javascript">
+    function openWin(){
+        var url = "js13_popup02.html";
+        var title = "";
+        var prop = "top=200px, left=600px,width=500px,height=500px,resizable=no";
+        window.open(url,title,prop);
+    }
+</script>
+</head>
+<body>
+    <h1>window 객체</h1>
+    <pre>
+    프로퍼티
+    -document
+    -history
+    -location
+    -navigator
+    -screen
+    -frames
+    -parents
+    -top
+    -self
+    메서드
+    -alert()
+    -confirm()
+    -prompt()
+    -back()
+    -forward()
+    -setInterval()
+    -cleatInterval()
+    -setTimeout()
+    -open()
+    -close()
+    </pre>
+
+    <div id="f1">
+        <h1>팝업창 만들기</h1>
+        <button onclick="openWin();" name="btn">창열기</button>
+        <hr>
+        <h1>회원가입하기(div팝업창)</h1>
+        <button onclick="" name="btn">회원가입</button>
+
+    </div>
+
+</body>
+</html>
