@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>select</title>
+<script type="text/javascript">
+    function show(){
+       var food = document.getElementsByName("food")[0];
+
+       //selectedIndex = select 태그에서 현재 선택이 되어있는
+       //              option 태그의 인덱스값을 반환
+       var idx = food.selectedIndex;
+
+       var foodVal = food.options[idx].value;
+       alert(foodVal);
+    }
+    function show2(){
+        var food = document.getElementsByName("food")[1];
+        var str = "";
+
+        for(var i=0; i<food.options.length; i++){
+            if(food.options[i].selected){
+                str += food.options[i].value+" ";
+            }
+        }
+        alert(str+" 먹고싶다.");
+    }
+</script>
+
+</head>
+<body>
+        <h1>음식 선택하기</h1>
+        <form>
+            <select name="food" onchange="show();">
+                <option>---선택---</option>
+                <option value="제육">제육</option>
+                <option value="라면">라면</option>
+                <option value="만두">만두</option>
+                <option value="호빵">호빵</option>
+                <option value="피자">피자</option>
+            </select>
+            <br><br><br>
+            <select name="food" multiple="multiple" size="5" >
+                <option value="제육">제육</option>
+                <option value="라면">라면</option>
+                <option value="만두">만두</option>
+                <option value="호빵">호빵</option>
+                <option value="피자">피자</option>
+            </select>
+            <input type="button" value="선택" onclick="show2();">
+
+
+        </form>
+</body>
+</html>
