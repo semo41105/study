@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom4</title>
+<style type="text/css">
+    img{
+        width: 300px;
+        height: 300px;
+    }
+    a{
+        font-size: 30px;
+        text-decoration: none;
+    }
+</style>
+<script type="text/javascript">
+window.onload = function(){
+    var count = 1;
+    var img = document.querySelector("img");
+    var as = document.querySelectorAll("a");
+
+    //왼쪽 a태그 클릭
+    as[0].onclick=function(){
+        var imgAlt = img.getAttribute("alt");
+        if(imgAlt == "flower1"){
+            count = 5;
+            img.setAttribute("alt","flower5");
+            img.setAttribute("src","image/flower5.PNG");
+        }else{
+            //img의 alt속성을 변경
+            img.setAttribute("alt","flower"+(--count));
+            //src 속성을 변경
+            img.setAttribute("src","image/flower"+count+".PNG");
+
+        }
+    }
+
+    //오른쪽 a태그 클릭
+    as[1].onclick=function(){
+        var imgAlt = img.getAttribute("alt");
+        if(imgAlt == "flower5"){
+            count = 1;
+            img.setAttribute("alt","flower1");
+            img.setAttribute("src","image/flower1.PNG");
+        }else{
+            img.setAttribute("alt","flower"+(++count));
+            img.setAttribute("src","image/flower"+count+".PNG");
+        }
+
+
+    }
+}
+
+</script>
+
+</head>
+<body>
+    <div>
+        <a href="#" id="lt">◀</a>
+        
+        <img alt="flower1" src="image/flower1.PNG">
+        
+        <a href="#" id="rt">▶</a>
+    </div>
+</body>
+</html>
