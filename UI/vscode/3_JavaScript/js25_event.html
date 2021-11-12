@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style type="text/css">
+    .div-test{
+        border: 1px solid black;
+        padding: 20px;
+    }
+    .div1{background-color: red;}
+    .div2{background-color: orange;}
+    .div3{background-color: yellow;}
+    .div4{background-color: green;}
+</style>
+    
+<script type="text/javascript">
+    function test1(msg){
+        alert(msg);
+    }
+
+    function test2(msg, e){
+        var event = e || window.event;
+
+        alert(msg);
+        event.stopPropagation();
+
+    }
+
+
+</script>
+</head>
+<body>
+    <h3>이벤트 버블링</h3>
+    <div onclick="test1('1번 div');" class="div-test div1">
+        <div onclick="test1('2번 div');" class="div-test div2">
+            <div onclick="test1('3번 div');" class="div-test div3">
+                <div onclick="test1('4번 div');" class="div-test div4">
+                </div>
+            </div>
+        </div>
+    </div>
+    <h3>이벤트 버블링 막기</h3>
+    <div onclick="test2('1번 div');" class="div-test div1">
+        <div onclick="test2('2번 div');" class="div-test div2">
+            <div onclick="test2('3번 div');" class="div-test div3">
+                <div onclick="test2('4번 div');" class="div-test div4">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    <h3>표준이벤트모델</h3>
+    <button id="btn">확인</button>
+    <script>
+        window.onload = function(){
+            var btn = document.getElementById("btn");
+
+            btn.addEventListener('click',function(){alert('이벤트 발생'); });
+            btn.addEventListener('mouseenter', function(){btn.style.background="red";});
+        }
+    </script>
+</body>
+</html>
