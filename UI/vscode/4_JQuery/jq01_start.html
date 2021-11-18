@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery 시작</title>
+
+<style type="text/css">
+    img{
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+    }
+</style>
+<script type="text/javascript" src="js/jquery-3.5.1.js"></script>   
+<script type="text/javascript">
+    $(function(){
+        console.log('문서 읽어들이기 완료');
+    });
+
+
+    /*
+    //페이지 내의 코드를 모두 읽어들인 후 실행해라. ==> window.onload=function(){}
+    jQuery(document).ready(function(){
+        //코드
+
+    });
+
+    $(function(){});
+    //위에 코드랑 똑같음.
+
+    jQuery 기본 작성법: selector 표현식
+    (css 작성법 + javascript 작성법)
+    예>
+        $("selector").함수();
+        $("p").css("color","red");
+
+    */
+
+    function highlight(){
+        //id가 list01인 태그의 자식인 li를 찾아서
+        //li들 중 첫번째 요소에
+        //배경색을 pink로 바꾸고싶다.
+
+        // var li = document.getElementsByTagName("li")[0];
+        // console.log(li);
+        // li.style.backgroundColor = "pink";
+
+        $("#list01 > li").eq(0).css("background-color","pink");
+        //eq를 이용해 몇 번째인지 선택한 것임. 
+        //li태그가 5개 있는데 0번째 인덱스를 선택해서 css를 적용한 것임.
+
+    }
+
+    $(function(){
+        $("img").click(function(){
+            alert("이미지를 클릭!");
+            $(this).hide();
+
+        });
+
+    });
+
+    function showImg(){
+        $("img").show();
+
+    }
+
+    function resizeImg(){
+        // $("img").css("width","100px").css("height", "100px");
+        $("img").css({"width":"100px" , "height":"100px"}).css("opacity","0.5");
+    }
+    function addImg(){
+        $("img").last().after("<img src='image/img01.PNG'>");
+
+    }
+    function toggleImg(){
+        $("img").toggle();
+
+    }
+
+</script>
+
+</head>
+<body>
+    <h1>JQuery 시작</h1>
+    <ul id="list01">
+        <li>1.셀렉터 표현식</li>
+        <li>2.DOM탐색</li>
+        <li>3.이벤트</li>
+        <li>4.이펙트</li>
+        <li>5.Ajax</li>
+    </ul>
+    <button onclick="highlight();">리스트 강조하기</button>
+    <hr>
+    <button onclick="showImg();">이미지 보이기</button>
+    <button onclick="resizeImg();">이미지 축소</button>
+    <button onclick="addImg();">이미지 추가</button>
+    <button onclick="toggleImg();">이미지 숨기기/보이기</button>
+    <br><br>
+    <div>
+        <img alt="test" src="image/img01.png">
+    </div>
+
+
+</body>
+</html>
