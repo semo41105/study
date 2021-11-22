@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자 3</title>
+<script type="text/javascript" src="js/jquery-3.5.1.js"></script>
+<script type="text/javascript">
+    function click01(){
+        var value = $("input:text").val();
+        alert(value);
+        //js: value();
+        //jq: val();
+
+    }
+    function click02(){
+        var value = $("input:radio").val();
+        $("#view").html(value);
+    }
+    function click03(){
+        var value = $("input:checkbox").val();
+        $("#view").html(value);
+    }
+
+    $(function(){
+        var selEle = document.getElementsByTagName("select")[0];
+
+        selEle.onchange=function(){
+            alert(selEle.options[selEle.selectedIndex].value+" : "+selEle.selectedIndex);
+        }
+    });
+
+
+</script>
+
+</head>
+<body>
+    <form>
+        <input type="text" >
+        <input type="button" value="선택" onclick="click01();">
+        <input type="radio" value="30/21/03~" onclick="click02();">30년 21월 3일~
+        <input type="checkbox" value="스마트 콘텐츠 융합" onclick="click03();">스마트 콘텐츠 융합
+        <div id="view"></div>
+        <select>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+    </form>
+</body>
+</html>
