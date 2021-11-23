@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자 4</title>
+<script type="text/javascript" src="js/jquery-3.5.1.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $("#signal").submit(function(){
+            if($(".infobox").val()==null || $(".infobox").val() == ""){
+                $(".error").show();
+                return false;
+            }
+
+        });
+
+        $("#confirm").click(function(){
+            //이전에 떴을 내용을 지운다.
+            $("#result").empty();
+
+            if($("input[name=chk]:checked").length==0){
+                //체크박스를 하나도 체크하지 않았을 경우
+                alert('하나 이상 선택해 주세요');
+            }else{
+                $("input[name=chk]:checked").each(function(i){
+                    //each는 반복함수라 생각하면 됨
+                    var chk = $("input[name=chk]:checked").eq(i);
+                    //i가 자동으로 인덱스값이 된다
+                    var book = chk.next().text();
+                    var price = chk.val();
+                    $("#result").append(book+" : "+price+" : "+i+"<br>");
+
+                });
+            }
+
+        });
+
+        $("input[name=chk]").click(function(){
+            if( $("input[name=chk]").length == $("input[name=chk]:checked").length ){
+                $("input[name=all]").prop("checked",true);
+            }else{
+                $("input[name=all]").prop("checked",false);
+
+            }
+        });
+    });
+
+    function allchk(bool){
+        $("input[name=chk]").each(function(){
+            $(this).prop("checked",bool);
+        });
+    }
+
+
+</script>
+</head>
+<body>
+    <form id="signal" action="jq01_start.html">
+        <div>
+            <span class="label">User Id</span>
+            <input type="text" class="infobox" name="userId">
+            <span class="error" style="color: red; display: none;" >반드시 입력하세요!!!</span> 
+        </div>
+        <input type="submit" class="submit" value="입력하기">
+    </form>
+
+    <hr>
+
+    <fieldset style="width: 300px;" >
+        <legend>체크 여부 확인</legend>
+        <input type="checkbox" name="all" onclick="allchk(this.checked);">전체선택<br>
+
+        <input type="checkbox" name="chk" value="20000"><b>Java</b><br>
+        <input type="checkbox" name="chk" value="25000"><b>javascript</b><br>
+        <input type="checkbox" name="chk" value="30000"><b>Spring</b><br>
+      
+        <input type="button" value="확인" id="confirm"><br>
+
+        <span>선택한 책 가격</span>
+        <div id="result"></div>
+
+    </fieldset>
+</body>
+</html>
