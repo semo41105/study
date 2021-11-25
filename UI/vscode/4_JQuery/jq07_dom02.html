@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom2</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+/*    $(document).ready(function(){
+
+    });
+    $(function(){
+
+    });
+    window.onload=function(){
+
+    }
+셋 다 똑같다
+*/
+    $(document).ready(function(){
+        $("div").find("b").css({"font-size":"30px","color":"red"});
+        $("div").children("#chd").text("2.children()");
+        $("p").parent().css("background-color","skyblue");
+        $("p>b").parents("div").css("background-color","khaki");
+        //parents는 부모들 모두가 선택되니까 괄호 안에 지정해서 명시 가능
+        //parent는 바로 위의 부모
+        $("p").eq(0).next().css({"font-size":"30px", "color":"blue"});
+    });
+
+
+</script>
+</head>
+<body>
+    <pre>
+        <b>find("selector")
+        선택한 엘리먼트의 자손들 중에 탐색하고자 하는 엘리먼트를 찾는다.
+        </b>
+        <b>children("selector")
+        선택한 엘리먼트의 자식요소들 중에 탐색하고자 하는 엘리먼트를 찾는다.
+        </b>
+        <b>parent()/parents()
+        선택한 엘리먼트의 부모요소를 찾는다.
+        </b>
+        <b>next("selector")
+        선택한 엘리먼트 다음에 따라오는 요소를 찾는다.    
+        </b>
+    </pre>
+    <div>
+        <p><b>1</b></p>
+        <p id="chd">2</p>
+        <p>3</p>
+        <p>4</p>
+        <p>5</p>
+    </div>
+</body>
+</html>
