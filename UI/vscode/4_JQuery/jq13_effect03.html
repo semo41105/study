@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>효과3</title>
+<style type="text/css">
+    .main_ment{width: 300px;}
+    .sub_menu1{cursor: pointer;}
+    .sub_menu2{display: none;}
+</style>
+<script type="text/javascript" src="js/jquery-3.5.1.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $("b").click(function(){
+            // $(this).next().slideDown();
+            //b태그의 다음 태그를 고른 것
+            // $(this).parent().siblings().find("ul").slideUp();
+
+            $(this).next().slideToggle().end().parent().siblings().find("ul").slideUp();
+            //이렇게 한줄로도 처리 가능. end로 한번 끊어줬음.
+        });
+    });
+</script>
+</head>
+<body>
+    <p>메뉴 만들기</p>
+    <ul type="square" class="main_menu">
+        <li class="sub_menu1"><b>(1)CSS 선택자</b>
+            <ul type="circle" class="sub_menu2" >
+                <li>tag로 선택하기</li>
+                <li>id로 선택하기</li>
+                <li>class로 선택하기</li>
+                <li>parent child로 선택하기</li>
+                <li>parent &gt; child로 선택하기</li>
+                <li>:nth-child로 선택하기</li>
+                <li>:first-child로 선택하기</li>
+                <li>:last-child로 선택하기</li>
+            </ul>
+        </li>
+        <li class="sub_menu1"><b>(2)속성 선택자</b>
+            <ul type="circle" class="sub_menu2">
+                <li>[attr]</li>
+                <li>[attr=value]</li>
+            </ul>
+        </li>
+        <li class="sub_menu1"><b>(3)폼 선택자</b>
+            <ul type="circle" class="sub_menu2">
+                <li>:input 타입</li>
+            </ul>
+        </li>
+        <li class="sub_menu1"><b>(4)사용자 정의 선택자</b>
+            <ul type="circle" class="sub_menu2">
+                <li>:eq()</li>
+                <li>:first</li>
+                <li>:last</li>
+                <li>:parent</li>
+            </ul>
+        </li>
+
+
+    </ul>
+</body>
+</html>
