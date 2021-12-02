@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>효과4</title>
+<style type="text/css">
+    img{
+        width: 200px;
+        height: 200px;
+    }
+    .addsize{
+        width: 300px;
+        height: 300px;
+    }
+    .onoffimg{
+        display: none;
+    }
+</style>
+<script type="text/javascript" src="js/jquery-3.5.1.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $("#btn").click(function(){
+            $("img").toggleClass("onoffimg");
+            //있으면 클래스를 제거하고, 없으면 클래스를 추가하고..
+        });
+
+        $("img").click(function(){
+            if($(this).hasClass("addsize")){
+                $(this).removeClass("addsize").attr("title","이미지 축소");
+            }else{
+                $(this).addClass("addsize").attr("title","이미지 확대");
+            }
+            // $(this).toggleClass("addsize");
+        });
+
+    });
+</script>
+</head>
+<body>
+    <button id="btn">이미지 on/off</button>
+    <br>
+    <img alt="flower1" src="image/flower1.PNG">
+    <img alt="flower2" src="image/flower2.PNG">
+    <img alt="flower3" src="image/flower3.PNG">
+</body>
+</html>
