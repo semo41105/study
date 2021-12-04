@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>바꾸기</title>
+<script type="text/javascript" src="js/jquery-3.5.1.js"></script>
+<script type="text/javascript">
+    $(function(){
+        //replaceWith( target.replaceWith(new) ) 선택한 요소를 지정한 요소로 대체
+        $("button:first").click(function(){
+            $("p").replaceWith("<b>replaceWith</b>");
+        });
+
+        //replaceAll( new.replaceAll(target) ) 선택한 요소를 지정된 요소로 대체
+        $("button:last").click(function(){
+            $("<b>replaceAll</b>").replaceAll("p");
+        });
+    });
+</script>
+
+</head>
+<body>
+    <div>
+        <p>DOM</p>
+        <p>DOM</p>
+    </div>
+    <button>바꾸기(replaceWith)</button>
+    <button>바꾸기(replaceAll)</button>
+
+</body>
+</html>
