@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style type="text/css">
+    .box{border: 2px solid red;}
+    #menu{
+        background-color: orange;
+        text-align: right;
+    }
+    a{
+        text-decoration: none;
+        font-size: 20px;
+    }
+    #menu div{
+        display: inline;
+        margin-right: 10px;
+    }
+</style>
+<script type="text/javascript" src="js/jquery-3.5.1.js"></script>
+<script type="text/javascript">
+    $(function(){
+        var $box = $("<div>").addClass("box");
+            //태그를 생성해서 box라는 클래스를 넣음. $box는 제이쿼리 변수명임
+            //<div class='box'></div>
+            $(".sub_menu:first").wrap($box);
+
+            $(".sub_menu").click(function(){
+                //unwrap()
+                //메뉴의 div(.sub_menu)를 전체 검색해서 box 클래스를 찾아 unwrap으로 벗긴다.
+
+                $(".sub_menu").unwrap(".box");
+
+                /*
+                $(".sub_menu").each(function(){
+                    if($(this).parent().is(".box")){
+                    //이 this는 each의 디브
+                        $(this).unwrap(".box");
+                    }
+                });
+
+                
+                
+                */
+
+                $(this).wrap($box);
+            });
+
+    });
+</script>
+</head>
+<body>
+    <div id="menu">
+        <div class="sub_menu">
+            <a href="#"><span>학비지원</span></a>
+        </div>
+        <div class="sub_menu">
+            <a href="#">과정검색</a>
+        </div>
+        <div class="sub_menu">
+            <a href="#">기관검색</a>
+        </div>
+        <div class="sub_menu">
+            <a href="#">질문답변</a>
+        </div>
+        <div class="sub_menu">
+            <a href="#">자격증</a>
+        </div>
+    </div>
+</body>
+</html>
