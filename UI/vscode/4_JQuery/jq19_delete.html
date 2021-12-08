@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제거</title>
+<style type="text/css">
+    div{border: 2px solid red; width: 200px; padding: 10px;}
+    p{background-color: orange;}
+    h1{border: 1px solid blue;}
+</style>
+<script type="text/javascript" src="js/jquery-3.5.1.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $("p:eq(0)").click(function(){
+            $(this).remove();
+            //통째로 사라짐
+        });
+        $("p:eq(1)").click(function(){
+            // $(this).empty();
+            //태그 자체는 남아있음
+            $(this).parent().empty();
+        });
+        $("p:eq(2)").click(function(){
+            var ele = $(this).detach();
+
+            $("h1").append(ele);
+        });
+    });
+
+</script>
+</head>
+<body>
+    <h1>엘리먼트 제거하기</h1>
+    <div>
+        <p>remove</p>
+        <p>empty</p>
+        <p>detach</p>
+    </div>
+</body>
+</html>
